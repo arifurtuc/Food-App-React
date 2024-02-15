@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-function Search() {
+function Search(props) {
+  const { recipeData, setRecipeData } = props;
   const [query, setQuery] = useState("Pizza");
   useEffect(() => {
     async function fetchRecipe() {
@@ -11,7 +12,7 @@ function Search() {
         `${URL}?query=${query}&apiKey=${API_KEY}`
       );
       const data = await apiResponse.json();
-      console.log(data.results);
+      setRecipeData(data.results);
     }
     fetchRecipe();
   }, [query]);
