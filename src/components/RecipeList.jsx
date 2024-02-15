@@ -1,9 +1,11 @@
+import RecipeItem from "./RecipeItem";
+
 function RecipeList(props) {
   const { recipeData } = props;
   return (
     <div>
       {recipeData.map((recipe) => (
-        <h1>{recipe.title}</h1>
+        <RecipeItem key={recipe.id} recipe={recipe} />
       ))}
     </div>
   );
