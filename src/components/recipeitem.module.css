@@ -1,0 +1,36 @@
+.itemContainer {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+  margin: 25px;
+  overflow: hidden;
+}
+.itemImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.itemContent {
+  text-align: center;
+}
+.itemName {
+  font-size: 1em;
+  color: #474f7a;
+  font-weight: 550;
+}
+.itemButton {
+  background-color: #474f7a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.buttonContainer {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
