@@ -4,6 +4,7 @@ import RecipeList from "./components/RecipeList";
 import Nav from "./components/Nav";
 import "./App.css";
 import RecipeContainer from "./components/RecipeContainer";
+import InnerContainer from "./components/InnerContainer";
 
 function App() {
   const [recipeData, setRecipeData] = useState([]);
@@ -12,7 +13,9 @@ function App() {
       <Nav />
       <Search recipeData={recipeData} setRecipeData={setRecipeData} />
       <RecipeContainer>
-        <RecipeList recipeData={recipeData} />
+        <InnerContainer>
+          <RecipeList recipeData={recipeData} />
+        </InnerContainer>
       </RecipeContainer>
     </>
   );
