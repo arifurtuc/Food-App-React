@@ -3,6 +3,7 @@ import Search from "./components/Search";
 import RecipeList from "./components/RecipeList";
 import Nav from "./components/Nav";
 import "./App.css";
+import RecipeContainer from "./components/RecipeContainer";
 
 function App() {
   const [recipeData, setRecipeData] = useState([]);
@@ -10,7 +11,9 @@ function App() {
     <>
       <Nav />
       <Search recipeData={recipeData} setRecipeData={setRecipeData} />
-      <RecipeList recipeData={recipeData} />
+      <RecipeContainer>
+        <RecipeList recipeData={recipeData} />
+      </RecipeContainer>
     </>
   );
 }
